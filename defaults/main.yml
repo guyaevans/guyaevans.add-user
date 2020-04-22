@@ -1,0 +1,6 @@
+---
+# defaults file for add-users
+add_user:
+  - os_user: 
+    os_user_pw: 
+    ssh_key_file:
