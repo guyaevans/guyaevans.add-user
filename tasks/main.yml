@@ -1,13 +1,13 @@
 ---
 # tasks file for add-users
-- name: add user {{ item.os_user }}
+- name: add users
   user:
     name: "{{ item.os_user }}"
     shell: /bin/bash
     password: "{{ item.os_user_pw | password_hash('sha512') }}"
     update_password: on_create
   loop: "{{ add_user }}"
-- name: add ssh key to {{ item.os_user }}
+- name: add ssh keys
   authorized_key:
     user: "{{ item.os_user }}"
     state: present
