@@ -21,6 +21,6 @@ Example Playbook
 
     - hosts: servers
       roles:
-         - { role: add-users}
+         - { role: guyaevans.add-users}
 
 
